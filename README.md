@@ -22,9 +22,9 @@ Python requirements:
 
 ## Preprocessing EyePACS and Messidor-2
 
-Download EyePACS zip files from https://www.kaggle.com/c/diabetic-retinopathy-detection/dataRun into `./data/eyepacs`. `$ ./eyepacs.sh` to decompress and preprocess the _Kaggle_ EyePACS data set, and redistribute this set into a training and test set.
+Download EyePACS zip files from https://www.kaggle.com/c/diabetic-retinopathy-detection/data into `./data/eyepacs`. Run `$ ./eyepacs.sh` to decompress and preprocess the EyePACS data set, and redistribute it into a training and test set with gradable images
 
-Run `$ ./messidor2.sh` to download, unpack, and preprocess the Messidor-2 data set. This data set is downloaded from the Datasets and Algorithms' section on Michael D. Abramoff's page [here](https://medicine.uiowa.edu/eye/abramoff).
+Run `$ ./messidor2.sh` to download, unpack, and preprocess the Messidor-2 data set.
 
 ## Training
 
