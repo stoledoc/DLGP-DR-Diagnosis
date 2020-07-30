@@ -12,7 +12,7 @@ Diabetic Retinopathy (DR) is one of the microvascular complications of Diabetes 
 
 Python requirements:
 
-- Python >= 3.6
+- Python >= 3.5
 - Tensorflow >= 2.0
 - Pillow
 - h5py
