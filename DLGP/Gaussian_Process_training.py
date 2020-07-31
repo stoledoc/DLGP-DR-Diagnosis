@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
-
-
 import pickle
 import gzip
 import numpy as np
@@ -47,56 +44,19 @@ import pickle
 from joblib import dump, load
 
 
-# Para leer las features que vienen desde InceptionV3. 2048 features por imagen.
-
-# In[4]:
-
-
-#Train de Kaggle: (56827 imágenes)
-
 with h5py.File("/home/stoledoc/work/datanfs/stoledoc/jama16-retina-replication-master/inceptionv3_features_kaggle_train.hdf5", "r") as datafile:
     features_kaggle_train = datafile["features"][:]
     retinopathy_kaggle_train = datafile["Retinopathy"][:]
 
-#Test de Kaggle: (8790 imágenes)
-
-#with h5py.File("/home/stoledoc/work/datanfs/stoledoc/jama16-retina-replication-master/inceptionv3_features_kaggle_test.hdf5", #"r") as datafile:
-#    features_kaggle_test = datafile["features"][:]
-#    retinopathy_kaggle_test = datafile["Retinopathy"][:]
-
-#Messidor2: (1748 imágenes)
-
-#with h5py.File("/home/stoledoc/work/datanfs/stoledoc/jama16-retina-replication-master/inceptionv3_features_messidor2.hdf5", #"r") as datafile:
-#    features_messidor2 = datafile["features"][:]
-#    retinopathy_messidor2 = datafile["Retinopathy"][:]
-
-
-# In[5]:
-
-
 df_train = pd.read_csv('/home/stoledoc/work/datanfs/stoledoc/jama16-retina-replication-master/kaggle_train_levels.csv', header = None)
-#df_test = pd.read_csv('/home/stoledoc/work/datanfs/stoledoc/work/Kaggle_DR_3/kaggle_test_levels.csv', header = None)
-
-
-# In[6]:
-
 
 levels_kaggle_train = np.asarray(df_train[1])
-#levels_kaggle_test = np.asarray(df_test[1])
-
-
-# In[9]:
-
 
 features_kaggle_train_0 = features_kaggle_train[np.where(levels_kaggle_train == 0)]
 features_kaggle_train_1 = features_kaggle_train[np.where(levels_kaggle_train == 1)]
 features_kaggle_train_2 = features_kaggle_train[np.where(levels_kaggle_train == 2)]
 features_kaggle_train_3 = features_kaggle_train[np.where(levels_kaggle_train == 3)]
 features_kaggle_train_4 = features_kaggle_train[np.where(levels_kaggle_train == 4)]
-
-
-# In[10]:
-
 
 features_kaggle_train_0_selected = features_kaggle_train_0[np.random.choice(features_kaggle_train_0.shape[0], size = 12660, replace = False),:]
 features_kaggle_train_1_selected = features_kaggle_train_1
@@ -106,10 +66,6 @@ features_kaggle_train_4_selected = features_kaggle_train_4
 
 X_train = np.concatenate([features_kaggle_train_0_selected, features_kaggle_train_1_selected, features_kaggle_train_2_selected, features_kaggle_train_3_selected, features_kaggle_train_4_selected], axis = 0)
 
-
-# In[11]:
-
-
 levels_kaggle_train_0 = np.zeros(12660)
 levels_kaggle_train_1 = np.ones(3479)
 levels_kaggle_train_2 = np.ones(12873)*2
@@ -118,27 +74,10 @@ levels_kaggle_train_4 = np.ones(1220)*4
 
 y_train_levels = np.concatenate([levels_kaggle_train_0, levels_kaggle_train_1, levels_kaggle_train_2, levels_kaggle_train_3, levels_kaggle_train_4], axis = 0)
 
-
-# In[12]:
-
-
 kernel = 1.0 * RBF(length_scale=1.0, length_scale_bounds=(1e-2, 1e3))+ WhiteKernel(noise_level=1e-5, noise_level_bounds=(1e-10, 1e+1))
-
-
-# In[13]:
-
 
 gpr = GaussianProcessRegressor(kernel=kernel, random_state=0, normalize_y = True, n_restarts_optimizer = 5)
 
-
-# In[ ]:
-
-
 gpr.fit(X_train, y_train_levels)
 
-
-# In[ ]:
-
-
 dump(gpr, '/home/stoledoc/work/datanfs/stoledoc/work/Kaggle_DR_3/gpr_kaggle_train_voets_inceptionv3_features_alldatawithnoise_paper.joblib')
-
