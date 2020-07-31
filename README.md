@@ -2,7 +2,7 @@
 
 Implementation of the Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis:
 
-* Santiago Toledo-Cortés, Melissa De La Pava, Oscar Perdómo, and Fabio A. González. (2020) ["Hybrid Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis and Uncertainty Quantification"].arXiv preprint: http://arxiv.org/abs/2007.14994
+* Santiago Toledo-Cortés, Melissa De La Pava, Oscar Perdómo, and Fabio A. González. (2020) "Hybrid Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis and Uncertainty Quantification". arXiv preprint: http://arxiv.org/abs/2007.14994
 
 ## Abstract
 
@@ -28,7 +28,7 @@ Run `$ ./messidor2.sh` to download, unpack, and preprocess the Messidor-2 data s
 
 ## Training
 
-Details and procedure for Inception-V3 fine-tuning with EyePACS dataset are in `./DLGP/InceptionV3_fine_tuning.ipynb`. After fine tuning, the global average pooling layer is defined as output for the feature extraction model. Extracted features are saved in an hdf5 file, and used as input for the Gaussian process. For Gaussian process training, run `$ ./DLGP/Gaussian_Process_training.py`. The model is saved in a `.joblib` file.
+Details and procedure for Inception-V3 fine-tuning with EyePACS dataset are in `./DLGP/InceptionV3_fine_tuning.ipynb`. After fine tuning, the global average pooling layer is defined as output for the feature extraction model. Extracted features are saved in an `.h5` file, and used as input for the Gaussian process. For Gaussian process training, run `$ ./DLGP/Gaussian_Process_training.py`. The model is saved in a `.joblib` file.
 
 ## Evaluation
 
