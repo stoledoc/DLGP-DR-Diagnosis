@@ -1,6 +1,6 @@
 # DLGP for Diabetic Retinopathy Diagnosis and Uncertainty Quantification
 
-!(https://github.com/stoledoc/Resources/blob/master/hybrid_model.png)
+![dlgp](https://github.com/stoledoc/Resources/blob/master/dlgp/hybrid_model.png)
 
 Implementation of the Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis:
 
