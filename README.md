@@ -1,5 +1,7 @@
 # DLGP for Diabetic Retinopathy Diagnosis and Uncertainty Quantification
 
+!(https://github.com/stoledoc/Resources/blob/master/hybrid_model.png)
+
 Implementation of the Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis:
 
 * Santiago Toledo-Cortés, Melissa de la Pava, Oscar Perdomo, and Fabio A. González. (2020) "Hybrid Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis and Uncertainty Quantification". Acepted at the 7th MICCAI Workshop on Ophthalmic Medical Image Analysis - OMIA7. arXiv preprint: http://arxiv.org/abs/2007.14994
@@ -33,3 +35,7 @@ Details and procedure for Inception-V3 fine-tuning with EyePACS dataset are in `
 ## Evaluation
 
 Evaluation of the final DLGP model on EyePACS test partition and Messidor-2 is performed in `./DLGP/Evaluation.ipynb`.
+
+## Usage
+
+Example on how to use the DLGP to diagnose diabetic retinopathy in a single eye fundus image is provided in `./DLGP/Usage.ipynb`.
