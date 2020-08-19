@@ -2,7 +2,7 @@
 
 Implementation of the Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis:
 
-* Santiago Toledo-Cortés, Melissa De La Pava, Oscar Perdómo, and Fabio A. González. (2020) "Hybrid Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis and Uncertainty Quantification". arXiv preprint: http://arxiv.org/abs/2007.14994
+* Santiago Toledo-Cortés, Melissa de la Pava, Oscar Perdomo, and Fabio A. González. (2020) "Hybrid Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis and Uncertainty Quantification". Acepted at the 7th MICCAI Workshop on Ophthalmic Medical Image Analysis - OMIA7. arXiv preprint: http://arxiv.org/abs/2007.14994
 
 ## Abstract
 
