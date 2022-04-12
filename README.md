@@ -1,10 +1,10 @@
-# DLGP for Diabetic Retinopathy Diagnosis and Uncertainty Quantification
+# Hybrid Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis and Uncertainty Quantification
 
 ![dlgp](https://github.com/stoledoc/Resources/blob/master/dlgp/hybrid_model.png)
 
 Implementation of the Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis:
 
-* Santiago Toledo-Cortés, Melissa de la Pava, Oscar Perdomo, and Fabio A. González. (2020) "Hybrid Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis and Uncertainty Quantification". Acepted at the 7th MICCAI Workshop on Ophthalmic Medical Image Analysis - OMIA7. arXiv preprint: http://arxiv.org/abs/2007.14994
+* Toledo-Cortés S., de la Pava M., Perdomo O., González F.A. (2020) Hybrid Deep Learning Gaussian Process for Diabetic Retinopathy Diagnosis and Uncertainty Quantification. In: Fu H., Garvin M.K., MacGillivray T., Xu Y., Zheng Y. (eds) Ophthalmic Medical Image Analysis. OMIA 2020. Lecture Notes in Computer Science, vol 12069. Springer, Cham. https://doi.org/10.1007/978-3-030-63419-3_21
 
 ## Abstract
 
